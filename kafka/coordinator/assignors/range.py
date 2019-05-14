@@ -47,7 +47,6 @@ class RangePartitionAssignor(AbstractPartitionAssignor):
                 log.warning('No partition metadata for topic %s', topic)
                 continue
             partitions = sorted(list(partitions))
-            partitions_for_topic = len(partitions)
             consumers_for_topic.sort()
 
             partitions_per_consumer = len(partitions) // len(consumers_for_topic)
